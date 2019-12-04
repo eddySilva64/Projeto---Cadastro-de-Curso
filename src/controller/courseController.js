@@ -42,9 +42,12 @@ module.exports = {
 
         const id = req.params.id;
 
-        const course = await Courses.findById(id);
+        const course = await Courses.findById(id).then(() => {
+          res.send(course)
+        }).catch(error => {
+             res.status(404).json('Register not Found !')
+        });
 
-        res.send(course);
    },
 
    async updateCourse(req, res) {
@@ -53,9 +56,11 @@ module.exports = {
 
         const body = req.body;
 
-        const course = await Courses.findByIdAndUpdate(id, body,{ new: true });
-
-        res.send(course);
+        const course = await Courses.findByIdAndUpdate(id, body,{ new: true }).then(() => {
+          res.send(course)
+        }).catch(error => {
+          res.status(404).json('Register not Found !')
+        });
    },
 
    async destroyCourse(req, res) {
@@ -65,7 +70,7 @@ module.exports = {
         await Courses.findByIdAndRemove(id).then(() => {
              res.json('Registration deleted successfully !')
         }).catch(error => {
-             res.json('Error' + error)
+          res.status(404).json('Register not Found !')
         });
 
    }
