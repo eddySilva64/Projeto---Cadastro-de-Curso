@@ -17,7 +17,7 @@ Como usar a API:
 
 Quando clonar o repositorio rodar no terminal do repositorio da API o comando npm install, esse comando vai baixar todos os modulos do projeto, feito isso rodar o npm run dev para inicializar a aplicação.
 
-Rotas
+Rotas:
 
 Rota GET http://localhost:3001/course-list: vai mostrar todos uma lista de todos os registros do Banco de Dados.
 
