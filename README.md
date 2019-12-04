@@ -1,1 +1,1 @@
-# Projeto---Cadastro-de-Curso
+# Projeto-Cadastro-de-Curso

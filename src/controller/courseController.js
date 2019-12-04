@@ -62,9 +62,11 @@ module.exports = {
     
         const id = req.params.id;
 
-        await Courses.findByIdAndRemove(id);
-
-        res.send()
+        await Courses.findByIdAndRemove(id).then(() => {
+             res.json('Registration deleted successfully !')
+        }).catch(error => {
+             res.json('Error' + error)
+        });
 
    }
 }
