@@ -45,7 +45,7 @@ module.exports = {
         const course = await Courses.findById(id).then(() => {
           res.send(course)
         }).catch(error => {
-             res.status(404).json('Register not Found !')
+             res.status(404).json('Register not Found !' + error)
         });
 
    },
@@ -59,7 +59,7 @@ module.exports = {
         const course = await Courses.findByIdAndUpdate(id, body,{ new: true }).then(() => {
           res.send(course)
         }).catch(error => {
-          res.status(404).json('Register not Found !')
+          res.status(404).json('Register not Found !' + error)
         });
    },
 
@@ -70,7 +70,7 @@ module.exports = {
         await Courses.findByIdAndRemove(id).then(() => {
              res.json('Registration deleted successfully !')
         }).catch(error => {
-          res.status(404).json('Register not Found !')
+          res.status(404).json('Register not Found !' + error)
         });
 
    }
