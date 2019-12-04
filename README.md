@@ -1,6 +1,4 @@
 # Projeto-Cadastro-de-Curso
-<<<<<<< HEAD
-=======
 
 API que faz o cadastro, autalização, exclusão e mostra todos os cursos cadastrados.
 
@@ -30,4 +28,4 @@ Rota POST http://localhost:3001/create: vai criar um novo registro no Banco de D
 Rota PUT http://localhost:3001/course-update/:id: vai atualizar um registra do Banco de Dados.
 
 Rota DELETE http://localhost:3001/course-destroy/:id: vai excluir um registro do Banco de Dados.
->>>>>>> 4103ada4ea9f7b58f58258d276fac1b4a9350845
+
